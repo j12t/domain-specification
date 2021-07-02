@@ -9,7 +9,7 @@ import com.jt93.domain.specification.sample.User;
 public class AndSpecificationTest {
 
 	@Test
-	public void testSatifactionAndOK() {
+	public void testTrueAndTrueOK() {
 		
 		DomainSpecification<User> nameSpec = new ContainsSpecification<User>("name", User::getName, "Upo", true);
 		DomainSpecification<User> firstnameSpec = new ContainsSpecification<User>("firstname", User::getFirstname, "EaN", true);
@@ -22,7 +22,7 @@ public class AndSpecificationTest {
 	}
 
 	@Test
-	public void testSatifactionAndFirstKO() {
+	public void testFalseAndTrueKO() {
 		
 		DomainSpecification<User> nameSpec = new ContainsSpecification<User>("name", User::getName, "Upo", true);
 		DomainSpecification<User> firstnameSpec = new ContainsSpecification<User>("firstname", User::getFirstname, "EaN", true);
@@ -35,7 +35,7 @@ public class AndSpecificationTest {
 	}
 
 	@Test
-	public void testSatifactionAndSecondKO() {
+	public void testSTrueAndFalseKO() {
 		
 		DomainSpecification<User> nameSpec = new ContainsSpecification<User>("name", User::getName, "Upo", true);
 		DomainSpecification<User> firstnameSpec = new ContainsSpecification<User>("firstname", User::getFirstname, "EaN", true);
@@ -48,7 +48,7 @@ public class AndSpecificationTest {
 	}
 
 	@Test
-	public void testSatifactionAndBothKO() {
+	public void testFalseAndFalseKO() {
 		
 		DomainSpecification<User> nameSpec = new ContainsSpecification<User>("name", User::getName, "Upo", true);
 		DomainSpecification<User> firstnameSpec = new ContainsSpecification<User>("firstname", User::getFirstname, "EaN", true);
