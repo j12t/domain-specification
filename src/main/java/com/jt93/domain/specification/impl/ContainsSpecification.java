@@ -46,8 +46,8 @@ public class ContainsSpecification<T> extends AbstractDomainSpecification<T> {
 	 * @param getValue function to call on <T> object in order to check if it contains the value
 	 * @param value    the value to check
 	 */
-	public ContainsSpecification(String name, Function<T, String> getValue, String value) {
-		this(name, getValue, value, true);
+	public ContainsSpecification(String name, Function<T, String> function, String value) {
+		this(name, function, value, true);
 	}
 
 	@Override

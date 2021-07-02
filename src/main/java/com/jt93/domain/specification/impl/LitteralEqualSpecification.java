@@ -27,8 +27,8 @@ public class LitteralEqualSpecification<T> extends EqualSpecification<T, String>
 	 * @param getValue function to call on <T> object in order to check if it equals the value
 	 * @param value    the value to check
 	 */
-	public LitteralEqualSpecification(String name, Function<T, String> getValue, String value, boolean ignoreCase) {
-		super(name, getValue, value);
+	public LitteralEqualSpecification(String name, Function<T, String> function, String value, boolean ignoreCase) {
+		super(name, function, value);
 		this.ignoreCase = ignoreCase;
 	}
 
@@ -38,8 +38,8 @@ public class LitteralEqualSpecification<T> extends EqualSpecification<T, String>
 	 * @param getValue function to call on <T> object in order to check if it equals the value
 	 * @param value    the value to check
 	 */
-	public LitteralEqualSpecification(String name, Function<T, String> getValue, String value) {
-		this(name, getValue, value, true);
+	public LitteralEqualSpecification(String name, Function<T, String> function, String value) {
+		this(name, function, value, true);
 	}
 
 	@Override
