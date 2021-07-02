@@ -74,5 +74,12 @@
 		<mockito-version>3.8.0</mockito-version>
 		<junit-version>4.12</junit-version>
 	</properties>
-
+	
+	<distributionManagement>
+		<repository>
+			<id>ossrh</id>
+			<name>Central Repository OSSRH</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 </project>
